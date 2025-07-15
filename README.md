@@ -42,23 +42,11 @@ Built using **HTML**, **CSS**, and **JavaScript**, each hero page displays an an
 ## 🎞️ GIF Background Sources
 
 Animated backgrounds from:
-- **Tumblr**
-- **Tenor**
 - **Giphy**
-- **Dribbble**
-- **Pinterest**
+
 
 > *All assets used are for educational and fan tribute purposes only.*
 
----
-
-## 📸 Preview
-
-![Iron Man Preview](https://i.imgur.com/LElIepq.jpg)
-
-> Want live deployment? Host it with [GitHub Pages](https://pages.github.com/) or [Netlify](https://netlify.com).
-
----
 
 ## 📄 License & Credits
 
