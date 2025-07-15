@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Iron Man Hero Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav">
+    <h2>Menu</h2>
+    <nav>
+      <a href="#" onclick="showPage(1)">Iron Man</a>
+      <a href="#" onclick="showPage(2)">Stark Industries</a>
+      <a href="#" onclick="showPage(3)">Avengers</a>
+      <a href="#" onclick="showPage(4)">JARVIS</a>
+      <a href="#" onclick="showPage(5)">Tony’s Legacy</a>
+    </nav>
+  </div>
+
+  <div class="topbar" id="topbar" style="display: none;">
+    <h2 id="topbar-title">Topbar</h2>
+  </div>
+
+  <div class="page page1 active">
+    <div class="hero">
+      <div class="ironman-description">
+        <h1>Iron Man</h1>
+        <p>Meet Tony Stark — genius, billionaire, playboy, philanthropist — and Earth’s armored Avenger.</p>
+        <a href="https://www.marvel.com/characters/iron-man-tony-stark" target="_blank" class="visit-btn">Learn More</a>
+        <br><br>
+        <button class="next-btn" onclick="showPage(2)">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page page2">
+    <div class="hero">
+      <div class="stark-description">
+        <h1>Stark Industries</h1>
+        <p>Leading technology and innovation in defense, energy, and artificial intelligence.</p>
+        <a href="https://marvelcinematicuniverse.fandom.com/wiki/Stark_Industries" target="_blank" class="visit-btn">Visit Stark Industries</a>
+        <br><br>
+        <button class="next-btn" onclick="showPage(3)">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page page3">
+    <div class="hero">
+      <div class="avengers-description">
+        <h1>The Avengers</h1>
+        <p>Earth’s mightiest heroes assembled to defend the world from threats beyond imagination.</p>
+        <a href="https://www.marvel.com/teams-and-groups/avengers" target="_blank" class="visit-btn">Meet the Avengers</a>
+        <br><br>
+        <button class="next-btn" onclick="showPage(4)">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page page4">
+    <div class="hero">
+      <div class="jarvis-description">
+        <h1>J.A.R.V.I.S. AI</h1>
+        <p>Your advanced digital assistant — just a rather very intelligent system, always at your command.</p>
+        <a href="https://marvelcinematicuniverse.fandom.com/wiki/J.A.R.V.I.S." target="_blank" class="visit-btn">Access JARVIS</a>
+        <br><br>
+        <button class="next-btn" onclick="showPage(5)">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page page5">
+    <div class="hero">
+      <div class="legacy-description">
+        <h1>Tony Stark's Legacy</h1>
+        <p>“I am Iron Man.” A legacy of courage, sacrifice, and innovation that changed the world.</p>
+        <a href="https://www.marvel.com/movies/avengers-endgame" target="_blank" class="visit-btn">Remember the Legacy</a>
+        <br><br>
+        <button class="next-btn" onclick="showPage(1)">Back to Start</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageNumber) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+      document.querySelector('.page' + pageNumber).classList.add('active');
+
+      const topbar = document.getElementById('topbar');
+      const title = document.getElementById('topbar-title');
+
+      if (pageNumber === 2) {
+        topbar.style.display = 'block';
+        title.textContent = 'About Stark Industries';
+      } else if (pageNumber === 4) {
+        topbar.style.display = 'block';
+        title.textContent = 'AI Systems (JARVIS)';
+      } else {
+        topbar.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
